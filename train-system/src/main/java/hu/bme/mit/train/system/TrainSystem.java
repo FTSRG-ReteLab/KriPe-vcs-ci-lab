@@ -24,5 +24,9 @@ public class TrainSystem {
 	public TrainUser getUser() {
 		return user;
 	}
+	
+	public void test_stdout() {
+	  System.out.println("Hello world!");
+	}
 
 }
