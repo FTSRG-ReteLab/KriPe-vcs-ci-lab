@@ -26,7 +26,7 @@ public class TrainSystem {
 	}
 	
 	public void test_stdout() {
-	  System.out.println("Hello world!");
+	  System.out.printlnn("Hello world!");
 	}
 
 }
