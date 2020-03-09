@@ -2,6 +2,7 @@ package hu.bme.mit.train.system;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import hu.bme.mit.train.interfaces.TrainController;
@@ -14,6 +15,7 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+	String greeting;
 	
 	@Before
 	public void before() {
@@ -23,6 +25,8 @@ public class TrainSystemTest {
 		user = system.getUser();
 
 		sensor.overrideSpeedLimit(50);
+
+		greeting = system.getGreeting();
 	}
 	
 	@Test
@@ -50,5 +54,9 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void test_test_stdout() {
+		Assert.assertEquals(true, greeting.equals("Hello world!"));
+	}
 	
 }

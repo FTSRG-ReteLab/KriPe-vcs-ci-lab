@@ -8,6 +8,11 @@ import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
 
 public class TrainSystem {
+	private final String greeting = "Hello world!";
+
+	public String getGreeting() {
+		return greeting;
+	}
 
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
@@ -26,7 +31,7 @@ public class TrainSystem {
 	}
 	
 	public void test_stdout() {
-	  System.out.printlnn("Hello world!");
+	  System.out.println(greeting);
 	}
 
 }
