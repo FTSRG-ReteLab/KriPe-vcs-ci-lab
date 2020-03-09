@@ -14,6 +14,7 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+	TrainSystem.Tachograph tachograph;
 	
 	@Before
 	public void before() {
@@ -23,6 +24,9 @@ public class TrainSystemTest {
 		user = system.getUser();
 
 		sensor.overrideSpeedLimit(50);
+
+
+		tachograph = new TrainSystem.Tachograph();
 	}
 	
 	@Test
@@ -50,5 +54,9 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
+	public void TestTachograph() {
+		Assert.assertEquals(true, tachograph.getSize() > 0);
+	}
 	
 }
