@@ -54,5 +54,5 @@ The figure below illustrates this behavior using an example.
 * Peti
 
 ```
-Hello world!
+Hi world!
 ```
