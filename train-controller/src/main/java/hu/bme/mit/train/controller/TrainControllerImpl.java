@@ -12,11 +12,12 @@ public class TrainControllerImpl implements TrainController {
 
 	public TrainControllerImpl(){
 		this.timer = new Thread() {
+			@Override
 			public void run() {
 				timer.run();
 				try {
 					followSpeed();
-					timer.sleep(1000);
+					timer.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
